@@ -46,7 +46,7 @@
         const guesses = document.querySelector('.guesses');
         const lastResult = document.querySelector('.lastResult');
         const lowOrHi = document.querySelector('.lowOrHi');
-        const countDown = document.querySelector('.attemptsCountDown');
+        const attemptsCountDown = document.querySelector('.attemptsCountDown');
 
         const guessField = document.querySelector('.guessField');
         const guessSubmit = document.querySelector('.guessSubmit');
@@ -64,6 +64,7 @@
                 }
             
             guesses.textContent += userGuess + " ";
+            attemptsCountDown.textContent = "Attempts left: " + countDown;
 
             if (userGuess === randomNumber) {
                 lastResult.textContent = "Congratulations! You got it right!";
